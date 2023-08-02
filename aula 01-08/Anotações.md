@@ -1,4 +1,5 @@
 Professor. Helder Pereira
+
 Carga horária da disciplina: 120 hs
 Encontro semanais: 
  - 6 horas (3 hs terça-feira e 3 hs quarta-feira)
