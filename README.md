@@ -15,3 +15,6 @@ Composição da nota de cada prova:
 Quantidade de provas: 3 a 4
  - Se 3 provas  - computo da media:  (p1 + (p2+p3)/2)/2
 - Se 4 provas - computo da media: ((p1+p2)/2 + (p3+p4)/2)/2
+
+# Apostilas importantes
+
