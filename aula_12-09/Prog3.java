@@ -34,5 +34,10 @@ public class Prog3 {
             System.out.println("x e t são Iguais");
         else 
             System.out.println("x e t Diferentes");
+
+        if(x == z)
+            System.out.println("x e z são Iguais");
+        else 
+            System.out.println("x e z Diferentes");
     }
 }
