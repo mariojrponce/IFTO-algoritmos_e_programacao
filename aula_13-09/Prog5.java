@@ -15,8 +15,8 @@ public class Prog5 {
 
         //Forma correta de comparar strings
         if(a.equalsIgnoreCase(b))
-            System.out.println("iguais.");
+            System.out.println("correta iguais.");
         else
-            System.out.println("diferentes.");
+            System.out.println("correta diferentes.");
     }
 }
