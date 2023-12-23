@@ -1,0 +1,39 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+/*
+Faça um programa que leia um arquivo que contenha nome
+e idade e o programa deverá apresentar na tela o nome da pessoa mais
+velha. 
+*/
+public class Atividade2{
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Informe o nome do arquivo a ser visualizado.");
+            return;
+        }
+        File arq = new File(args[0]); //Criando um objeto a ser vinculado a um arquivo
+        if(!arq.exists()){
+            System.out.println("Aquivo não existe.");
+            return;
+        }
+        
+        BufferedReader br = new BufferedReader(new FileReader(arq)); //abrindo um arquivo
+        String linha, nomeF="";
+        int maiorId =0;
+        while (((linha = br.readLine())!= null)) { //lendo linha a linha
+            String v[] = linha.split(" "); //split cria um vetor de strings a partir da strinig
+            int id = Integer.parseInt(v[1]);
+            if(id > maiorId){
+                maiorId = id;
+                nomeF = v[0];
+
+            }
+        }
+
+        System.out.println("O mais velho(a) é: " + nomeF + " idade: "+maiorId);
+    
+    }
+}

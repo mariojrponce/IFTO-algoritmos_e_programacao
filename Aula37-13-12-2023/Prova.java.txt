@@ -1,0 +1,42 @@
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Prova{
+
+    public static int procuraPalavras(File arq, int qtdL) throws IOException{
+        int contP=0;
+        FileReader fr = new FileReader(arq);
+        int x;
+        String pl="";
+        while((x = fr.read())!= -1){
+            if((x>=65 && x <= 90)||(x>=97 && x <=122)){
+                pl+=(char)x;
+            }else{
+                if(pl.length() >= qtdL){
+                    System.out.println(pl);
+                    contP++;
+                }
+               pl="";
+            }
+        }
+        return contP;
+    }
+    public static void main(String[] args) throws IOException {
+        
+        if(args.length < 2){
+            System.out.println("Informe o nome do arquivo e quantidade de letras");
+            return;
+        }
+
+        File arq = new File(args[0]);
+        int qtdL = Integer.parseInt(args[1]);
+        if(! arq.exists()){
+            System.out.println("Arquivo inexistente");
+            return;
+        }
+        
+        System.out.println("Foram encontradas: " + procuraPalavras(arq, qtdL));
+
+    }
+}
